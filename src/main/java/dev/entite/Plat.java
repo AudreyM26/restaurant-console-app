@@ -3,7 +3,8 @@ package dev.entite;
 import java.util.Objects;
 
 public class Plat {
-
+	
+	private Integer id;
     private String nom;
     private Integer prixEnCentimesEuros;
 
@@ -15,7 +16,21 @@ public class Plat {
         this.prixEnCentimesEuros = prixEnCentimesEuros;
     }
 
-    public String getNom() {
+    /**
+	 * @return the id
+	 */
+	public Integer getId() {
+		return id;
+	}
+
+	/**
+	 * @param id the id to set
+	 */
+	public void setId(Integer id) {
+		this.id = id;
+	}
+
+	public String getNom() {
         return nom;
     }
 

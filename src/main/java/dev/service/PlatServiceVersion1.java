@@ -14,11 +14,11 @@ import org.springframework.stereotype.Service;
 public class PlatServiceVersion1 implements IPlatService {
 	
 	//@Qualifier("platDaoFichier")
-	@Qualifier("platDaoMemoire")
+	@Qualifier("platDaoJdbc")
     private IPlatDao dao;
 
  
-    public PlatServiceVersion1 (@Qualifier("platDaoMemoire") IPlatDao dao) {
+    public PlatServiceVersion1 (@Qualifier("platDaoJdbc") IPlatDao dao) {
         this.dao = dao;
     }
 
