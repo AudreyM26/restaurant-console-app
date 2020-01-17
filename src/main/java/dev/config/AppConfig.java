@@ -9,7 +9,8 @@ import org.springframework.context.annotation.*;
 @Configuration
 @ComponentScan("dev")
 @PropertySource("application.properties")
-@Import(DataSourceMySQLConfig.class)
+//@Import(DataSourceMySQLConfig.class)
+@Import(JpaConfig.class)
 
 public class AppConfig {
 

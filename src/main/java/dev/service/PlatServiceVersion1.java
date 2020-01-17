@@ -13,12 +13,10 @@ import org.springframework.stereotype.Service;
 @Service
 public class PlatServiceVersion1 implements IPlatService {
 	
-	//@Qualifier("platDaoFichier")
-	@Qualifier("platDaoJdbc")
     private IPlatDao dao;
 
  
-    public PlatServiceVersion1 (@Qualifier("platDaoJdbc") IPlatDao dao) {
+    public PlatServiceVersion1 (@Qualifier("platDaoJpa") IPlatDao dao) {
         this.dao = dao;
     }
 
@@ -36,7 +34,7 @@ public class PlatServiceVersion1 implements IPlatService {
             throw new PlatException("un plat doit avoir un nom de plus de 3 caractères");
         }
 
-        if (prixPlat <= 5000) {
+        if (prixPlat <= 500) {
             throw new PlatException("le prix d'un plat doit être supérieur à 5 €");
         }
 
