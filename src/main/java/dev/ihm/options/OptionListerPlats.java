@@ -24,6 +24,6 @@ public class OptionListerPlats implements IOptionMenu {
             //System.out.println(plat.getNom() + " (" + (plat.getPrixEnCentimesEuros() / 100) + " €)");
         	System.out.println(plat.getId()+" - "+plat.getNom() + " (" + (plat.getPrixEnCentimesEuros() / 100) + " €)");
         });
-
+        System.out.println();
     }
 }
